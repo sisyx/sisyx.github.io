@@ -1,12 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sajad's website</title>
 	<style>
+		* {
+			transition: all 50ms;
+			box-sizing: border-box;
+		}
 		a {
 			color: unset;
 		}
-	</style>
+		a:hover {
+			opacity: 0.8;
+		}
+		svg {
+			width: 30px;
+			height: 30px;
+		}
+		details {
+			margin: 10px 0;
+			border: 1px var(--primary-color) solid;
+		}
+		details p {
+			padding: 5px;
+		}
+		summary {
+			color: var(--bg-color);
+			background-color: var(--primary-color);
+			font-size: 1.2rem;
+			padding-left: 5px;
+		}
+		body {
+			padding: 5px;
+			margin: 0;
+			width: 100%;
+			max-width: 1110px;
+		}
+		.socials {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+		.socials a {
+			text-decoration: none;
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+		.socials a div {
+			text-align: center;
+			max-width: 10ch;
+		}
+		
+		/* themes  */
+		@media (prefers-color-scheme: dark) {
+			/* Styles for dark mode */
+			:root {
+				--primary-color: #fbfbfe;
+				--bg-color: #1c1b22;
+				background-color: var(--bg-color);
+				color: var(--primary-color);
+			}
+			a:hover, a:active {
+				color: #c1283f;
+			}
+		}
+		
+		@media (prefers-color-scheme: light) {
+			/* Styles for light mode */
+			:root {
+				--primary-color: #15141a;
+				--bg-color:  #fbfbfe;
+				background-color: var(--bg-color);
+				color: var(--primary-color);
+			}
+			a:hover {
+				color: #154399;
+			}
+		}
+		@media (max-width: 700px) {
+			a.telegram-link-desktop {
+				display: none;
+			}
+		}
+		@media (min-width: 700px) {
+			a.telegram-link-mobile {
+				display: none;
+			}
+		}
+		</style>
 	<!-- <style>
 		:root {
 			--primary-color: green;
@@ -40,15 +124,19 @@
 <body>
 	<header>
 		<h1>sajad's Blog</h1>
-		<div>
-			<a href="https://github.com/sisyjs">
+	</header>
+	<nav>	
+		<div class="socials">
+			<!-- <h3>socials: </h3> -->
+			<a href="https://github.com/sisyx">
+				<div>github</div>
 				<svg role="img" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>GitHub</title><path fill="currentColor" d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
 			</a>
-			<a href="tg:resolve?domain=sajadLoop">
+			<a href="tg:resolve?domain=HamishehMoatarez" class="telegram-link-mobile">
+				<div>Telegram Channel</div>
 				<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
 				width="28" height="20" viewBox="0 0 48.000000 48.000000"
 				preserveAspectRatio="xMidYMid meet">
-
 				<g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)"
 				fill="currentColor" stroke="none">
 				<path d="M232 356 c-117 -46 -218 -88 -223 -93 -13 -13 6 -24 73 -43 l47 -12
@@ -59,22 +147,67 @@
 				</g>
 				</svg>
 			</a>
+			<a href="https://t.me/HamishehMoatarez" class="telegram-link-desktop">
+				<div>Telegram Channel</div>
+				<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+				width="28" height="20" viewBox="0 0 48.000000 48.000000"
+				preserveAspectRatio="xMidYMid meet">
+				<g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)"
+				fill="currentColor" stroke="none">
+				<path d="M232 356 c-117 -46 -218 -88 -223 -93 -13 -13 6 -24 73 -43 l47 -12
+				108 67 c59 38 119 75 132 84 49 31 13 -9 -81 -93 -92 -82 -96 -88 -103 -137
+				-4 -27 -4 -53 -1 -56 3 -4 19 6 34 20 16 15 33 27 38 27 6 0 35 -18 64 -40 59
+				-44 76 -49 84 -22 19 64 76 358 72 369 -3 7 -11 13 -18 12 -7 0 -109 -38 -226
+				-83z"/>
+				</g>
+				</svg>
+			</a>
+			<a href="https://www.pinterest.com/phresearcher/">
+				<div>Pinterest</div>
+				<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+					viewBox="0 0 511.998 511.998" xml:space="preserve">
+				<path fill="currentColor" d="M405.017,52.467C369.774,18.634,321.001,0,267.684,0C186.24,0,136.148,33.385,108.468,61.39
+					c-34.114,34.513-53.675,80.34-53.675,125.732c0,56.993,23.839,100.737,63.76,117.011c2.68,1.098,5.377,1.651,8.021,1.651
+					c8.422,0,15.095-5.511,17.407-14.35c1.348-5.071,4.47-17.582,5.828-23.013c2.906-10.725,0.558-15.884-5.78-23.353
+					c-11.546-13.662-16.923-29.817-16.923-50.842c0-62.451,46.502-128.823,132.689-128.823c68.386,0,110.866,38.868,110.866,101.434
+					c0,39.482-8.504,76.046-23.951,102.961c-10.734,18.702-29.609,40.995-58.585,40.995c-12.53,0-23.786-5.147-30.888-14.121
+					c-6.709-8.483-8.921-19.441-6.222-30.862c3.048-12.904,7.205-26.364,11.228-39.376c7.337-23.766,14.273-46.213,14.273-64.122
+					c0-30.632-18.832-51.215-46.857-51.215c-35.616,0-63.519,36.174-63.519,82.354c0,22.648,6.019,39.588,8.744,46.092
+					c-4.487,19.01-31.153,132.03-36.211,153.342c-2.925,12.441-20.543,110.705,8.618,118.54c32.764,8.803,62.051-86.899,65.032-97.713
+					c2.416-8.795,10.869-42.052,16.049-62.495c15.817,15.235,41.284,25.535,66.064,25.535c46.715,0,88.727-21.022,118.298-59.189
+					c28.679-37.02,44.474-88.618,44.474-145.282C457.206,127.983,438.182,84.311,405.017,52.467z"/>
+				</svg>
+			</a>
 		</div>
-	</header>
-	<p>Small Posts</p>
-	<ul>
-		<li>
-			<a>Hello World</a>
-			<p>I started coding from 2022/Aug.</p>
-		</li>
-		<li>
-			<a>Music Taste</a>
-			<p>I love metal and instrumetal music. Feel free to send me some tracks</p>
-		</li>
-	</ul>
-	<section>
-		<h4>A few letters about my life</h4>
-		<p>First thing to notice is that 'I use Arch btw':).<br>I am Sajad Bahadori, a 19 y.o computer engineer. I was born in Iran, the southern part.<br>I'm a computer engineering student and I work as a Fron-end developer. I rather to use Tailwind and React instead of other front-end technologies. Actually Tailwind gives me more freedom than Bootstrap.<br>I love computers (that I'm currently studying them), music and philosophy. I love freedom more than anything else. Actually this is the main reason I choose Arch. Another thing to notice is that I care for few things. So this was summary of my life. </p>
-	</section>
-</body>
-</html>
+	</nav>
+	<hr/>
+	<main>
+		<section>
+			<h2>Small Posts</h2>
+			<div>
+				<details>
+					<summary>Hello World</summary>
+					<p>I started coding from 2022/Aug.</p>
+				</details>
+			</div>
+			<div>
+				<details>
+					<summary>Music Taste</summary>
+					<p>I love metal and instrumetal music. Feel free to send me some tracks</p>
+				</details>
+			</div>
+		</section>
+		<hr/>
+		<section>
+			<h2>Bigger Posts</h2>
+			<div>
+				<details>
+					<summary>A few letters about my life</summary>
+					<p>First thing to notice is that 'I use Arch BTW':).<br>I am Sajad Bahadori, a 19 y.o computer engineer. I was born in Iran, the southern part.<br>I'm a computer engineering student and I work as a Front-end developer. I rather to use Tailwind and React instead of other Front-end technologies. Actually Tailwind gives me more freedom than Bootstrap.<br>I love computers (that I'm currently studying them), music and philosophy. I love freedom more than anything else. Actually this is the main reason I choose Arch. Another thing to notice is that I care for few things. So this was summary of my life. </p>
+				</details>
+			</div>
+		</section>
+	</main>
+	</body>
+	</html>
+	
