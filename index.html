@@ -26,6 +26,10 @@
 		details p {
 			padding: 5px;
 		}
+		details audio {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 		summary {
 			color: var(--bg-color);
 			background-color: var(--primary-color);
@@ -52,6 +56,9 @@
 		.socials a div {
 			text-align: center;
 			max-width: 10ch;
+		}
+		.bigger-posts-section p {
+			text-align: justify;
 		}
 		
 		/* themes  */
@@ -127,13 +134,13 @@
 	</header>
 	<nav>	
 		<div class="socials">
-			<!-- <h3>socials: </h3> -->
+			<!-- <h3 class="socials-text">socials: </h3> -->
 			<a href="https://github.com/sisyx">
-				<div>github</div>
+				<!-- <div>github</div> -->
 				<svg role="img" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>GitHub</title><path fill="currentColor" d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
 			</a>
-<!-- 			<a href="tg:resolve?domain=HamishehMoatarez" class="telegram-link-mobile">
-				<div>Telegram Channel</div>
+			<a href="tg:resolve?domain=sajiFe" class="telegram-link-mobile">
+				<!-- <div>Telegram</div> -->
 				<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
 				width="28" height="20" viewBox="0 0 48.000000 48.000000"
 				preserveAspectRatio="xMidYMid meet">
@@ -147,8 +154,8 @@
 				</g>
 				</svg>
 			</a>
-			<a href="https://t.me/HamishehMoatarez" class="telegram-link-desktop">
-				<div>Telegram Channel</div>
+			<a href="https://t.me/sajiFe" class="telegram-link-desktop">
+				<!-- <div>Telegram</div> -->
 				<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
 				width="28" height="20" viewBox="0 0 48.000000 48.000000"
 				preserveAspectRatio="xMidYMid meet">
@@ -161,9 +168,9 @@
 				-83z"/>
 				</g>
 				</svg>
-			</a> -->
+			</a>
 			<a href="https://www.pinterest.com/phresearcher/">
-				<div>Pinterest</div>
+				<!-- <div>Pinterest</div> -->
 				<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 					viewBox="0 0 511.998 511.998" xml:space="preserve">
 				<path fill="currentColor" d="M405.017,52.467C369.774,18.634,321.001,0,267.684,0C186.24,0,136.148,33.385,108.468,61.39
@@ -199,17 +206,50 @@
 			<div>
 				<details>
 					<summary>Music Taste</summary>
-					<p>I love metal and instrumetal music. Feel free to send me some tracks</p>
+					<p>
+						I love metal and instrumetal music. Feel free to send me some tracks
+						<br/>
+						<div>TOOL - Fortysix & 2</div>
+						<audio controls>
+							<source src="./musics/TOOL - Fortysix & 2.mp3">
+						</audio>
+						<br/>
+						<div>Schubert - Serenade</div>
+						<audio controls>
+							<source src="./musics/Schubert - Serenade.mp3">
+						</audio>
+						<br/>
+						<div>Chopin - Nocture No.20</div>
+						<audio controls>
+							<source src="./musics/Chopin - Nocturne NO.20.mp3">
+						</audio>
+						<br/>
+						<div>Antimatter - Fighting for a lost cause</div>
+						<audio controls>
+							<source src="./musics/Antimatter - Fighting for a lost cause.mp3">
+						</audio>
+						<br/>
+						<div>Rage Against the Machine - Fist full of steel</div>
+						<audio controls>
+							<source src="./musics/Rage Against the Machine - Fistful of steel.mp3">
+						</audio>
+					</p>
 				</details>
 			</div>
 		</section>
 		<hr/>
-		<section>
+		<section class="bigger-posts-section">
 			<h2>Bigger Posts</h2>
 			<div>
 				<details>
 					<summary>A few letters about my life</summary>
-					<p>First thing to notice is that 'I use Arch BTW':).<br>I am Sajad Bahadori, a 19 y.o computer engineer. I was born in Iran, the southern part.<br>I'm a computer engineering student and I work as a Front-end developer. I rather to use Tailwind and React instead of other Front-end technologies. Actually Tailwind gives me more freedom than Bootstrap.<br>I love computers (that I'm currently studying them), music and philosophy. I love freedom more than anything else. Actually this is the main reason I choose Arch. Another thing to notice is that I care for few things. So this was summary of my life. </p>
+					<p>First thing to notice is that 'I use Arch BTW':).
+						<!-- <br> -->
+						I am Sajad Bahadori, a 19 y.o computer engineer. I was born in Iran, the southern part.
+						<!-- <br> -->
+						I'm a computer engineering student and I work as a Front-end developer. I rather to use free(as in freedom) softwares.
+						<!-- <br> -->
+						I love computers (that I'm currently studying them), music and philosophy. but most of all, I care about freedom. Actually this is the main reason I choose Arch linux and not distros that are user-friendly and easy to use. Another thing to notice is that I care for few things. So this was summary of my life. </p>
 				</details>
 			</div>
 		</section>
