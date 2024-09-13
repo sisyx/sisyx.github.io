@@ -1,0 +1,64 @@
+@font-face {
+    font-family: vazir;
+    src: url("../fonts/Vazirmatn-Regular.ttf");
+}
+/* themes  */
+@media (prefers-color-scheme: dark) {
+    /* Styles for dark mode */
+    :root {
+        --primary-color: #fbfbfe;
+        --bg-color: #1c1b22;
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+    }
+    a:hover, a:active {
+        color: #c1283f;
+    }
+}
+.post-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+    /* Styles for light mode */
+    :root {
+        --primary-color: #15141a;
+        --bg-color:  #fbfbfe;
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+    }
+    a:hover {
+        color: #154399;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bg-color);
+}
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+    font-family: vazir;
+    line-height: 2rem;
+    text-align: justify;
+}
+.container {
+    max-width: 700px;
+    padding: 1rem;
+}
+p {
+    font-size: 1.2rem;
+}
+a {
+    color: unset;
+}
+a:hover {
+    opacity: 0.8;
+}
