@@ -54,6 +54,9 @@ body {
     margin: 0;
     width: 100%;
     max-width: 1110px;
+    /* text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
 }
 .socials {
     display: flex;
@@ -71,7 +74,7 @@ body {
     max-width: 10ch;
 }
 .bigger-posts-section p {
-    text-align: justify;
+    text-align: left;
 }
 
 /* themes  */
